@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sum of Evens - A Time Complexity Analysis</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.png" />
+		<link href="src/app.css" rel="stylesheet" />
+	</head>
+	<body class="min-h-screen bg-base-200 p-4">
+		<div class="container mx-auto max-w-5xl">
+			<div class="card bg-base-100 shadow-xl">
+				<div class="card-body">
+					<h1 class="card-title text-2xl mb-6">
+						Sum of Evens - Time Complexity Analysis
+					</h1>
+					<div class="mb-6">
+						<range-slider
+							style="width: 100%"
+							min="0"
+							max="10000"
+							value="2000,8000"
+							name="input-range"
+							aria-label="Choose your input size range"
+							step="10"
+						>
+							<div data-track></div>
+							<div
+								data-track-fill
+								style="
+									background-color: oklch(45% 0.24 277.023);
+								"
+							></div>
+							<div data-runnable-track>
+								<div
+									data-thumb
+									aria-label="Minimum Input Size"
+									style="
+										background-color: oklch(
+											45% 0.24 277.023
+										);
+									"
+								></div>
+								<div
+									data-thumb
+									aria-label="Maximum Input Size"
+									style="
+										background-color: oklch(
+											45% 0.24 277.023
+										);
+									"
+								></div>
+							</div>
+						</range-slider>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+						<div class="form-control">
+							<label for="min-range" class="label">
+								<span class="label-text">Min Input Size:</span>
+							</label>
+							<input
+								type="number"
+								id="min-range"
+								disabled
+								class="input input-bordered w-full"
+							/>
+						</div>
+
+						<div class="form-control">
+							<label for="max-range" class="label">
+								<span class="label-text">Max Input Size:</span>
+							</label>
+							<input
+								type="number"
+								id="max-range"
+								disabled
+								class="input input-bordered w-full"
+							/>
+						</div>
+					</div>
+
+					<div class="flex flex-col sm:flex-row gap-4 items-end">
+						<div class="form-control flex-grow w-full">
+							<label for="range-steps" class="label">
+								<span class="label-text">Step Size:</span>
+							</label>
+							<select
+								id="range-steps"
+								class="select select-bordered w-full"
+							>
+								<option value="100">100</option>
+								<option value="200">200</option>
+								<option value="500">500</option>
+								<option value="1000">1000</option>
+							</select>
+						</div>
+
+						<button
+							id="analyze-btn"
+							class="btn btn-primary min-w-[120px] w-full sm:w-auto"
+						>
+							Analyze
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="mockup-window bg-base-100 border border-base-300 shadow-xl w-full mt-6"
+			>
+				<div
+					class="grid place-content-center border-t border-base-300 p-4 w-full h-[500px]"
+					id="result-card"
+				></div>
+			</div>
+			<div class="flex w-full justify-center gap-3 p-4 mt-4">
+				<a>
+					<img
+						src="/badge-1.png"
+						alt="project-badge"
+						class="block object-contain h-auto max-h-12"
+					/>
+				</a>
+				<a href="https://github.com/imshahab">
+					<img
+						src="/badge-2.png"
+						alt="developer-badge"
+						class="block object-contain h-auto max-h-12"
+					/>
+				</a>
+				<a href="https://github.com/imshahab/sum-of-evens">
+					<img
+						src="/badge-3.png"
+						alt="github-badge"
+						class="block object-contain h-auto max-h-12"
+					/>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="module" src="./src/main.js"></script>
+</html>
